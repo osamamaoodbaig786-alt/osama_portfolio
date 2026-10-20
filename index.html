@@ -75,6 +75,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .logo {
             font-family: var(--font-heading);
@@ -88,15 +90,16 @@
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 22px;
+            gap: 20px;
             align-items: center;
+            flex-wrap: wrap;
         }
         .nav-links a {
             font-family: var(--font-sub);
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1rem;
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: all 0.3s ease;
@@ -162,7 +165,7 @@
             flex-wrap: wrap;
             gap: 50px;
         }
-        .hero-content { flex: 1; min-width: 320px; }
+        .hero-content { flex: 1; min-width: 280px; }
         .hero-content h1 {
             font-family: var(--font-heading);
             font-size: 2.8rem;
@@ -220,6 +223,7 @@
             background-size: 300% 300%;
             animation: gradientBorder 5s ease infinite;
             box-shadow: 0 0 35px rgba(0, 240, 255, 0.35);
+            margin: 0 auto;
         }
         @keyframes gradientBorder {
             0% { background-position: 0% 50%; }
@@ -442,6 +446,37 @@
             background: linear-gradient(135deg, #111827, #008ba3);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
+
+        /* Media Query for Mobile Responsiveness Fix */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+            }
+            .nav-links {
+                justify-content: center;
+                gap: 12px;
+                font-size: 0.95rem;
+            }
+            .nav-links a {
+                color: var(--text-main); /* Automatically adapts to theme (dark/light) */
+            }
+            .hero {
+                padding: 50px 0;
+                text-align: center;
+                justify-content: center;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-content h3 {
+                font-size: 1.3rem;
+            }
+            .hero-content p {
+                margin: 0 auto 25px auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -499,7 +534,7 @@
                 <div class="skill-card">
                     <i class="fas fa-brain" style="font-size: 32px; color: var(--primary-cyan); margin-bottom: 15px;"></i>
                     <h3>AI & Python Engineering</h3>
-                    <p>Automated workflow systems, data analysis scripts, AI integration, and FastAPI / Flask backend development.</p>
+                    <p>Automated workflow systems, data analysis scripts, AI integration, and Fast API / Flask backend development.</p>
                     <div class="tech-tags">
                         <span class="tag">Python</span>
                         <span class="tag">FastAPI</span>
@@ -537,7 +572,7 @@
             <p class="section-subtitle">Professional career roadmap</p>
             
             <div class="exp-card">
-                <h3>TECHNO FUZION | AI & Python Developer</h3>
+                <h3>• TECHNO FUZION | AI & Python Developer</h3>
                 <div class="company">Techno Fuzion</div>
                 <ul>
                     <li>Designing, developing, and deploying AI-driven solutions and applications using Python.</li>
@@ -572,7 +607,7 @@
             <p class="section-subtitle">Practical hands-on industry experience</p>
 
             <div class="exp-card">
-                <h3>TECHNO FUZION | Data Analyst</h3>
+                <h3>• TECHNO FUZION | Data Analyst</h3>
                 <div class="company">Techno Fuzion</div>
                 <ul>
                     <li>Analyzed datasets to extract actionable business insights and support decision-making processes.</li>
@@ -582,7 +617,7 @@
             </div>
 
             <div class="exp-card">
-                <h3>HBL Bank — SRM, Retail Lending</h3>
+                <h3>• HBL Bank — SRM, Retail Lending</h3>
                 <div class="company">HBL Bank</div>
                 <ul>
                     <li>Assisted the Retail Lending team in handling customer inquiries and loan products.</li>
@@ -592,7 +627,7 @@
             </div>
 
             <div class="exp-card">
-                <h3>Unique Poultry International | Accounts Assistant</h3>
+                <h3>• Unique Poultry International | Accounts Assistant</h3>
                 <div class="company">Unique Poultry International</div>
                 <ul>
                     <li>Prepared payroll, verified invoices, and maintained ledgers for accounts receivable.</li>
@@ -602,7 +637,7 @@
             </div>
 
             <div class="exp-card">
-                <h3>Nova Med Pharmaceuticals | Finance</h3>
+                <h3>• Nova Med Pharmaceuticals | Finance</h3>
                 <div class="company">Nova Med Pharmaceuticals</div>
                 <ul>
                     <li>Maintained financial records, managed databases, and assisted with bookkeeping software.</li>
@@ -751,77 +786,149 @@
                             <a href="mailto:osamamaoodbaig786@gmail.com" style="color:#fff; text-decoration:none;">osamamaoodbaig786@gmail.com</a>
                         </div>
                     </div>
+
+                    <div class="info-box-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span style="display:block; font-size:0.8rem; color:#888;">PHONE</span>
+                            <a href="tel:03054122965" style="color:#fff; text-decoration:none;">03054122965</a>
+                        </div>
+                    </div>
+
+                    <div class="info-box-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span style="display:block; font-size:0.8rem; color:#888;">LOCATION</span>
+                            <span style="color:#fff;">Lahore, Pakistan</span>
+                        </div>
+                    </div>
+
+                    <!-- GitHub & LinkedIn Glowing Social Buttons -->
+                    <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+                        <a href="https://github.com/osamamaoodbaig786-alt" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; color: var(--primary-cyan); text-decoration: none; font-family: var(--font-sub); font-weight: 700; font-size: 1rem; padding: 10px 20px; border: 1px solid rgba(0, 240, 255, 0.4); border-radius: 10px; background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(8px); transition: all 0.35s ease;">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-osama-maood-baig-634b26182/" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; color: var(--primary-cyan); text-decoration: none; font-family: var(--font-sub); font-weight: 700; font-size: 1rem; padding: 10px 20px; border: 1px solid rgba(0, 240, 255, 0.4); border-radius: 10px; background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(8px); transition: all 0.35s ease;">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
                 </div>
+
                 <div class="contact-form-card">
-                    <form action="#" method="POST">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea rows="4" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn-submit">Send Message</button>
+                    <form action="https://formspree.io/f/xnpapbgo" method="POST">
+                        <input type="text" name="name" required placeholder="Your Name">
+                        <input type="email" name="email" required placeholder="Your Email">
+                        <input type="text" name="subject" required placeholder="Subject">
+                        <textarea name="message" rows="5" required placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- JavaScript for Animations and Modals -->
+    <!-- Scripts -->
     <script>
-        // Resume Modal Controls
-        function openResumeModal() {
-            document.getElementById('resumeModal').style.display = 'flex';
-        }
-        function closeResumeModal() {
-            document.getElementById('resumeModal').style.display = 'none';
-        }
+        // Typing Effect Script
+        const roles = ["AI & Python Developer", "Web Application Developer", "Data Analyst & Automation Expert"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById("typing-text");
 
-        // Theme Toggle
-        function toggleTheme(checkbox) {
-            if(checkbox.checked) {
-                document.body.classList.add('light-mode');
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
             } else {
-                document.body.classList.remove('light-mode');
+                typingElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+        document.addEventListener("DOMContentLoaded", typeEffect);
+
+        // Particle Canvas Background Script
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 1.2;
+                this.vy = (Math.random() - 0.5) * 1.2;
+                this.radius = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx; this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > height) this.vy = -this.vy;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#00f0ff';
+                ctx.fill();
             }
         }
 
-        // Typing Effect
-        const words = ["AI & Python Developer", "Full-Stack Web Architect", "Data Analyst"];
-        let i = 0;
-        let timer;
+        for (let i = 0; i < 70; i++) particles.push(new Particle());
 
-        function typingEffect() {
-            let word = words[i].split("");
-            let loopTyping = function() {
-                if (word.length > 0) {
-                    document.getElementById('typing-text').innerHTML += word.shift();
-                } else {
-                    setTimeout(deletingEffect, 2000);
-                    return false;
-                }
-                timer = setTimeout(loopTyping, 100);
-            };
-            loopTyping();
-        }
-
-        function deletingEffect() {
-            let word = words[i].split("");
-            let loopDeleting = function() {
-                if (word.length > 0) {
-                    word.pop();
-                    document.getElementById('typing-text').innerHTML = word.join("");
-                } else {
-                    if (words.length > (i + 1)) {
-                        i++;
-                    } else {
-                        i = 0;
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach((p, index) => {
+                p.update();
+                p.draw();
+                for (let j = index + 1; j < particles.length; j++) {
+                    let dx = p.x - particles[j].x, dy = p.y - particles[j].y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(0, 240, 255, ${1 - dist / 120})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
                     }
-                    setTimeout(typingEffect, 500);
-                    return false;
                 }
-                timer = setTimeout(loopDeleting, 50);
-            };
-            loopDeleting();
+            });
+            requestAnimationFrame(animate);
         }
-        typingEffect();
+        animate();
+
+        // Resume Modal Functions
+        function openResumeModal() { document.getElementById('resumeModal').style.display = 'flex'; }
+        function closeResumeModal() { document.getElementById('resumeModal').style.display = 'none'; }
+
+        // Theme Toggle Function
+        templateTheme = function(checkbox) {
+            document.body.classList.toggle('light-mode', checkbox.checked);
+        };
+        function toggleTheme(checkbox) {
+            document.body.classList.toggle('light-mode', checkbox.checked);
+        }
     </script>
 </body>
 </html>
